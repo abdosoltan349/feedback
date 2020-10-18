@@ -104,21 +104,7 @@ $params = [
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
 # Our new data
-$data = array(
-    'name' => $name,
-    'sname' => $sessionname
-);
-# Create a connection
-$url = 'http://certe.freecluster.eu/';
-$ch = curl_init($url);
-# Form data string
-$postString = http_build_query($data, '', '&');
-# Setting our options
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-# Get the response
-$response = curl_exec($ch);
-curl_close($ch);
+
+header('Location: http://certe.freecluster.eu/?name='.$name.'&sname='.$sessionname.');
 
 ?>
