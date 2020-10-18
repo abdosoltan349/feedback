@@ -62,11 +62,11 @@ function maker($title,$desce,$dsc,$tempv) {
 	
 	
 	//End Date and Time
-	$file = time();
-	//imagepng($image);
-	 header ("Content-Disposition: attachment; filename=".$file.".jpg");
+	//$file = time();
+	imagepng($image);
+	// header ("Content-Disposition: attachment; filename=".$file.".jpg");
 	
-	readfile(imagejpeg($image));
+	//readfile(imagejpeg($image));
 	imagedestroy($image);
 	
 	//imagedestroy($image);
