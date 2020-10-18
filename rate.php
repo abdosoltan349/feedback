@@ -107,6 +107,5 @@ $params = [
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
 maker($name,$desce,"Future Academy",'1');
-header("Location: http://www.udemy.com");
-exit();
+
 ?>
