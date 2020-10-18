@@ -1,8 +1,5 @@
 <?php
 require("cert.php");
-$cookie_name = "feed";
-$cookie_value = "done";
-setcookie($cookie_name, $cookie_value, time() + 86400, "/"); // 86400 = 1 day
 date_default_timezone_set("Africa/Cairo");
 $date = date('Y/m/d H:i:s');
 $rate = $_POST['rating'];
@@ -10,7 +7,7 @@ $email = $_POST['email'];
 $name = $_POST['name'];
 $message = $_POST['message'];
 $sessionname = $_POST['sname'];
-$desce = "He has successfully attended the ". $sessionname ." session";
+//$desce = "He has successfully attended the ". $sessionname ." session";
 
 require __DIR__ . '/vendor/autoload.php';
 /*
@@ -106,6 +103,22 @@ $params = [
 ];
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
-maker($name,$desce,"Future Academy",'1');
+# Our new data
+$data = array(
+    'name' => $name,
+    'sname' => $sessionname
+);
+# Create a connection
+$url = 'http://certe.freecluster.eu/';
+$ch = curl_init($url);
+# Form data string
+$postString = http_build_query($data, '', '&');
+# Setting our options
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+# Get the response
+$response = curl_exec($ch);
+curl_close($ch);
 
 ?>
