@@ -1,5 +1,4 @@
 <?php
-require("cert.php");
 date_default_timezone_set("Africa/Cairo");
 $date = date('Y/m/d H:i:s');
 $rate = $_POST['rating'];
