@@ -7,15 +7,15 @@
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="http://certe.freecluster.eu/res/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="res/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="http://certe.freecluster.eu/res/animate.css">
+	<link rel="stylesheet" type="text/css" href="res/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="http://certe.freecluster.eu/res/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="res/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="http://certe.freecluster.eu/res/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="res/select2.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -90,14 +90,14 @@
 
 
 <!--===============================================================================================-->
-	<script src="http://certe.freecluster.eu/res/jquery-3.2.1.min.js"></script>
+	<script src="res/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="http://certe.freecluster.eu/res/popper.js"></script>
-	<script src="http://certe.freecluster.eu/res/bootstrap.min.js"></script>
+	<script src="res/popper.js"></script>
+	<script src="res/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="http://certe.freecluster.eu/res/select2.min.js"></script>
+	<script src="res/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="http://certe.freecluster.eu/res/tilt.jquery.min.js"></script>
+	<script src="res/tilt.jquery.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
