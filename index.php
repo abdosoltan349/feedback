@@ -34,13 +34,14 @@
 				<div class="contact100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
 				</div>
-
-				<form class="contact100-form validate-form" method = "POST" action="rate.php">
+			<?php if(isset($_GET['sname'])){
+				echo '<form class="contact100-form validate-form" method = "POST" action="rate.php">
 					<span class="contact100-form-title" style="alig">
 						Feedback
 					</span>
 					<div  class="wrap-input100 validate-input" >
-<div class="rating" ><input  type="radio" name="rating" value="5" id="5" ><label style="font-size:50px" for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label style="font-size:50px" for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label style="font-size:50px" for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label style="font-size:50px" for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label style="font-size:50px" for="1">☆</label>
+					<input type = "text" name="sname" value ="'.$_GET["sname"].'" hidden>
+					<div class="rating" ><input  type="radio" name="rating" value="5" id="5" ><label style="font-size:50px" for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label style="font-size:50px" for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label style="font-size:50px" for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label style="font-size:50px" for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label style="font-size:50px" for="1">☆</label>
 </div>
 <span class="rate" style="display:none; color:red;">Rating is required</span>
 </div>
@@ -70,7 +71,17 @@
 							Send
 						</button>
 					</div>
-				</form>
+				</form>';
+			
+			
+			}
+			
+			else{
+				echo'<span class="contact100-form-title" style="alig">
+						No Session Found in this time
+					</span>';
+			}
+			?>
 			</div>
 		</div>
 	</div>

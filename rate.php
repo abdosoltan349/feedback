@@ -1,13 +1,16 @@
 <?php
+require("cert.php");
 $cookie_name = "feed";
 $cookie_value = "done";
-setcookie($cookie_name, $cookie_value, time() + 3600, "/"); // 86400 = 1 day
+setcookie($cookie_name, $cookie_value, time() + 86400, "/"); // 86400 = 1 day
 date_default_timezone_set("Africa/Cairo");
 $date = date('Y/m/d H:i:s');
 $rate = $_POST['rating'];
 $email = $_POST['email'];
 $name = $_POST['name'];
 $message = $_POST['message'];
+$sessionname = $_POST['sname'];
+$desce = "He has successfully attended the ". $sessionname ." session";
 
 require __DIR__ . '/vendor/autoload.php';
 /*
@@ -74,6 +77,7 @@ $client = getClient();
 $service = new Google_Service_Sheets($client);
 
 // Prints the names and majors of students in a sample spreadsheet:
+
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 $spreadsheetId = '1ST-_6bL0MM1JAn_zCQtGuZfuYk2cmPeaPT3B4NCSDY0';
 $range = 'feedback!A2:c';
@@ -102,6 +106,7 @@ $params = [
 ];
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
+maker($name,$desce,"Future Academy",'1');
 header("Location: http://www.udemy.com");
 exit();
 ?>
