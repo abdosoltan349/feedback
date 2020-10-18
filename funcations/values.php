@@ -8,7 +8,7 @@ class values{
   function template(){
 	  $path = "";
 	  if($this->temp == 1){
-		  $path = "templates/cert1.jpg";
+		  $path = "http://dscfeedback.herokuapp.com/templates/cert1.jpg";
 	  }
 	  
 	 return $path;
@@ -28,7 +28,7 @@ class values{
 		"red" => 29,
 		"green" => 39,
 		"blue" => 80,
-		"font-type" => "fonts/bold.ttf"
+		"font-type" => "http://dscfeedback.herokuapp.com/fonts/bold.ttf"
 	);
 	  }
 	 
@@ -44,7 +44,7 @@ class values{
 		"red" => 29,
 		"green" => 39,
 		"blue" => 80,
-		"font-type" => "fonts/bold.ttf"
+		"font-type" => "http://dscfeedback.herokuapp.com/fonts/bold.ttf"
 	);
 	  }
 	 
@@ -58,7 +58,7 @@ class values{
 		"red" => 0,
 		"green" => 0 ,
 		"blue" =>0,
-		"font-type" => "fonts/regular.ttf"
+		"font-type" => "http://dscfeedback.herokuapp.com/fonts/regular.ttf"
 	);
 	  }
 	 
@@ -74,7 +74,7 @@ class values{
 		"red" => 0,
 		"green" => 0 ,
 		"blue" =>0,
-		"font-type" => "fonts/regular.ttf"
+		"font-type" => "http://dscfeedback.herokuapp.com/fonts/regular.ttf"
 	);
 	  }
 	 
