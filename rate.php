@@ -104,6 +104,6 @@ $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
 # Our new data
 
-header('Location: http://certe.freecluster.eu/?name='.$name.'&sname='.$sessionname.'');
+header('Location: http://certe.freecluster.eu/?name='.$name);
 
 ?>
