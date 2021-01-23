@@ -34,7 +34,7 @@
 				<div class="contact100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
 				</div>
-			<?php if(true){
+			<?php if(false){
 	//isset($_GET['sname'])
 				echo '<form class="contact100-form validate-form" method = "POST" action="rate.php">
 					<span class="contact100-form-title" style="alig">
