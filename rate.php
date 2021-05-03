@@ -22,10 +22,11 @@ $sql = "INSERT INTO feedback (name, email, rate,message,date)
 VALUES ('$name', '$email', '$rate','$message','$date')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+  echo "The certificate will be sent to your e-mail. Please wait";
+  sleep(4);
+  header("Location: https://www.facebook.com/DSCFutureAcademy");
+  exit();
+} 
 
 $conn->close();
 //$desce = "He has successfully attended the ". $sessionname ." session";
