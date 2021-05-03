@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO feedback (name, email, rate,message,date)
-VALUES ($name, $email, $rate,$message,$date)";
+VALUES ('$name', '$email', '$rate','$message','$date')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
