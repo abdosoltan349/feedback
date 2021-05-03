@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM feedback";
+$sql = "SELECT id,name,email,rate,message,date FROM feedback";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
