@@ -89,9 +89,10 @@ if (empty($values)) {
         printf("%s, %s\n", $row[0], $row[4]);
     }
 }
+,$rate,$message
 */
 $values = [
-    [$date,$email,$name,$rate,$message]
+    [$date,$email,$name]
   
 ];
 $body = new Google_Service_Sheets_ValueRange([
