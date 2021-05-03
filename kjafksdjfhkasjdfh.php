@@ -36,14 +36,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-     <tr>
-      <th scope="row">$row["id"]</th>
-      <td>$row["name"]</td>
-      <td>$row["email"]</td>
-      <td>$row["rate"]</td>
-      <td>$row["message"]</td>
-      <td>$row["date"]</td>
-    </tr>
+    echo 'ddd';
+ 
   }
 } else {
   echo "0 results";
