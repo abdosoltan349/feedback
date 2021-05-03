@@ -104,6 +104,5 @@ $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
 # Our new data
 
-echo '<script>alert("The certificate will be sent to you on your e-mail")</script>';
 
 ?>
