@@ -76,7 +76,7 @@ $service = new Google_Service_Sheets($client);
 
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 $spreadsheetId = '1ST-_6bL0MM1JAn_zCQtGuZfuYk2cmPeaPT3B4NCSDY0';
-$range = 'feedback!A2:c';
+$range = 'feedback!A2:E';
 $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 $values = $response->getValues();
 /*
@@ -89,10 +89,10 @@ if (empty($values)) {
         printf("%s, %s\n", $row[0], $row[4]);
     }
 }
-,$rate,$message
+
 */
 $values = [
-    [$date,$email,$name]
+    [$date,$email,$name,$rate,$message]
   
 ];
 $body = new Google_Service_Sheets_ValueRange([
