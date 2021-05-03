@@ -41,10 +41,12 @@ if ($result->num_rows > 0) {
      echo'<tr>';
      echo'<th scope="row">'.$row["id"].'</th>';
      echo '<td>'.$row["name"].'</td>';
+    /*
      echo '<td>'.$row["email"].'</td>';
      echo '<td>'.$row["rate"].'</td>';
      echo '<td>'.$row["message"].'</td>';
      echo '<td>'.$row["date"].'</td>';
+     */
     echo '</tr>'
     
  
