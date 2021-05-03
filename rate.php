@@ -6,10 +6,32 @@ $email = $_POST['email'];
 $name = $_POST['name'];
 $message = $_POST['message'];
 $sessionname = $_POST['sname'];
-//$desce = "He has successfully attended the ". $sessionname ." session";
+$servername = "sql11.freemysqlhosting.net";
+$username = "sql11410054";
+$password = "KPGQtFH5vS";
+$dbname = "sql11410054";
 
-require __DIR__ . '/vendor/autoload.php';
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (name, email, rate,message,date)
+VALUES ($name, $email, $rate,$message,$date)";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+//$desce = "He has successfully attended the ". $sessionname ." session";
 /*
+require __DIR__ . '/vendor/autoload.php';
+
 if (php_sapi_name() != 'cli') {
     throw new Exception('This application must be run on the command line.');
 }
@@ -17,7 +39,7 @@ if (php_sapi_name() != 'cli') {
 /**
  * Returns an authorized API client.
  * @return Google_Client the authorized client object
- */
+ 
 function getClient()
 {
     $client = new Google_Client();
@@ -90,7 +112,7 @@ if (empty($values)) {
     }
 }
 
-*/
+
 $values = [
     [$date,$email,$name,$rate,$message]
   
@@ -104,6 +126,9 @@ $params = [
 $result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 //printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
 # Our new data
+
+*/
+
 
 
 ?>
